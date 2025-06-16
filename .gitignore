@@ -1,0 +1,11 @@
+.env
+token.pkl
+credentials.json
+seen_emails.json
+__pycache__/
+dist/
+build/
+*.spec
+contact_aliases.json
+contacts.json
+venv/
