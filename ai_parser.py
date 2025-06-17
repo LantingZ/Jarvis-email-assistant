@@ -31,7 +31,7 @@ def replace_contact_name(email_data, contacts):
     if matched_name:
         email_data["to"] = contacts[matched_name]
     else:
-        print(f"❌ No contact match found for '{input_name}'.")
+        print(f"No contact match found for '{input_name}'.")
 
     return email_data
 
@@ -59,7 +59,7 @@ def fuzzy_match_contact(input_name, contacts):
         match_json = json.loads(content)
         return match_json.get("match")
     except Exception as e:
-        print("❌ AI contact matching failed:", e)
+        print("AI contact matching failed:", e)
         return None
 
 
@@ -82,5 +82,5 @@ def parse_email_command(prompt):
         content = response.choices[0].message.content.strip()
         return json.loads(content)
     except Exception as e:
-        print("❌ Failed to parse response:", e)
+        print("Failed to parse response")
         return None
